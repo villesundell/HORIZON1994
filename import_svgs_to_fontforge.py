@@ -1,22 +1,42 @@
-# Run this with: fontforge -script import_svgs_to_fontforge.py ./my_png_folder
+# Run this with: fontforge -script import_svgs_to_fontforge.py [small|large]
 import fontforge
 import sys
 import os
 import re
 
+if sys.argv[1] == "small":
+    SIZE = "Small"
+    DIMENSIONS = "8x8"
+    INPUT_DIR = "./glyphs_8_unicode_nopadding_svg"
+elif sys.argv[1] == "large":
+    SIZE = "Large"
+    DIMENSIONS = "8x16"
+    INPUT_DIR = "./glyphs_16_unicode_nopadding_svg"
+else:
+    exit("Error: Tell me the size")
+
 # === SETTINGS ===
-INPUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "./"
-OUTPUT_SFD = "horizon-1994-small.sfd"
-EXPORT_TTF = False
-EXPORT_WOFF = False
-EXPORT_WOFF2 = False
+BASENAME = "horizon1994-" + SIZE.lower()
+OUTPUT_SFD = BASENAME + ".sfd"
+EXPORT_TTF = True
+EXPORT_WOFF = True
+EXPORT_WOFF2 = True
 
 # === Initialize font ===
 font = fontforge.font()
 font.encoding = "UnicodeFull"
-font.fontname = "BIOSSmall"
-font.fullname = "Horizon '94 Small"
-font.familyname = "Horizon '94"
+font.fontname = "HORIZON1994"
+font.fullname = "HORIZON1994 Fixed " + SIZE + " (" + DIMENSIONS + ")"
+font.familyname = "HORIZON1994"
+font.copyright = "Public domain (CC0)"
+font.version = "1.0"
+
+font.sfnt_names = [
+    ("English (US)", "License", "CC0-1.0"),
+    ("English (US)", "License URL", "https://creativecommons.org/publicdomain/zero/1.0/"),
+    ("English (US)", "Manufacturer", "Ville Sundell")
+]
+
 font.ascent = 800
 font.descent = 200
 font.em = 1000
@@ -34,6 +54,7 @@ for fname in os.listdir(INPUT_DIR):
     glyph = font.createChar(codepoint)
     glyph.manualHints = True;
     glyph.importOutlines(path)
+    glyph.width = 500
     print(f"Imported {fname} → U+{codepoint:04X}")
 
 # === Save the font ===
@@ -41,13 +62,13 @@ font.generate(OUTPUT_SFD)
 print(f"✅ Saved SFD: {OUTPUT_SFD}")
 
 if EXPORT_TTF:
-    font.generate("bios-font.ttf")
-    print("✅ Saved TTF: bios-font.ttf")
+    font.generate(BASENAME + ".ttf")
+    print("✅ Saved TTF")
 
 if EXPORT_WOFF:
-    font.generate("bios-font.woff")
-    print("✅ Saved WOFF: bios-font.woff")
+    font.generate(BASENAME + ".woff")
+    print("✅ Saved WOFF")
 
 if EXPORT_WOFF2:
-    font.generate("bios-font.woff2")
-    print("✅ Saved WOFF2: bios-font.woff2")
+    font.generate(BASENAME + ".woff2")
+    print("✅ Saved WOFF2")
