@@ -1,15 +1,20 @@
+# Generates FontForge files and exports to various fonts.
+# Released under CC0 by Ville Sundell (2025)
 # Run this with: fontforge -script import_svgs_to_fontforge.py [small|large]
 import fontforge
 import sys
 import os
 import re
 
+EXPORT_TTF = True
+EXPORT_OTF = True
+EXPORT_UFO = True
+EXPORT_WOFF = True
+EXPORT_WOFF2 = True
+
 def generate_files(SIZE, DIMENSIONS, INPUT_DIR, GLYPH_WIDTH):
     # === SETTINGS ===
     BASENAME = "horizon1994-" + SIZE.lower()
-    EXPORT_TTF = True
-    EXPORT_WOFF = True
-    EXPORT_WOFF2 = True
 
     # === Initialize font ===
     font = fontforge.font()
@@ -23,12 +28,13 @@ def generate_files(SIZE, DIMENSIONS, INPUT_DIR, GLYPH_WIDTH):
     font.sfnt_names = [
         ("English (US)", "License", "CC0-1.0"),
         ("English (US)", "License URL", "https://creativecommons.org/publicdomain/zero/1.0/"),
-        ("English (US)", "Manufacturer", "Ville Sundell")
+        ("English (US)", "Manufacturer", "Ville Sundell"),
+        ("English (US)", "Trademark", "Unregistered 'Horizon' trademark was used by STB Systems, Inc. for their graphics cards in the 1990s.")
     ]
 
-    font.ascent = 875
-    font.descent = 125
     font.em = 1000
+    font.ascent = 875
+    font.descent = font.em - font.ascent
 
     # === Regex for U+XXXX.svg filenames ===
     pattern = re.compile(r'U\+([0-9A-Fa-f]{4,6})\.svg')
@@ -47,12 +53,20 @@ def generate_files(SIZE, DIMENSIONS, INPUT_DIR, GLYPH_WIDTH):
         print(f"Imported {fname} → U+{codepoint:04X}")
 
     # === Save the font ===
-    font.generate(BASENAME + ".sfd")
+    font.save(BASENAME + ".sfd")
     print(f"✅ Saved SFD")
 
     if EXPORT_TTF:
         font.generate(BASENAME + ".ttf")
         print("✅ Saved TTF")
+
+    if EXPORT_OTF:
+        font.generate(BASENAME + ".otf")
+        print("✅ Saved OTF")
+
+    if EXPORT_UFO:
+        font.generate(BASENAME + ".ufo")
+        print("✅ Saved UFO")
 
     if EXPORT_WOFF:
         font.generate(BASENAME + ".woff")
@@ -72,9 +86,9 @@ def generate_all_files():
     generate_small_files()
     generate_large_files()
 
-if sys.argv[1] == "small":
+if len(sys.argv) > 1 and sys.argv[1] == "small":
     generate_small_files()    
-elif sys.argv[1] == "large":
+elif len(sys.argv) > 1 and sys.argv[1] == "large":
     generate_large_files()
 else:
     generate_all_files()
