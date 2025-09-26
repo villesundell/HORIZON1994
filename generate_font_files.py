@@ -1,6 +1,6 @@
 # Generates FontForge files and exports to various fonts.
 # Released under CC0 by Ville Sundell (2025)
-# Run this with: fontforge -script import_svgs_to_fontforge.py [small|large]
+# Run this with: fontforge -script generate_font_files.py [small|large]
 import fontforge
 import sys
 import os
