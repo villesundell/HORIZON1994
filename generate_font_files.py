@@ -12,6 +12,8 @@ EXPORT_UFO = True
 EXPORT_WOFF = True
 EXPORT_WOFF2 = True
 
+EM = 1000
+
 def generate_files(size, dimensions, input_dir, glyph_width, ascent):
     # === SETTINGS ===
     BASENAME = "horizon1994-" + size.lower()
@@ -33,9 +35,9 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent):
         ("English (US)", "Descriptor", "Authentic IBM VGA BIOS compatible font from 1994.")
     ]
 
-    font.em = 1000
+    font.em = EM
     font.ascent = ascent
-    font.descent = font.em - font.ascent
+    font.descent = EM - ascent
 
     # === Regex for U+XXXX.svg filenames ===
     pattern = re.compile(r'U\+([0-9A-Fa-f]{4,6})\.svg')
@@ -81,7 +83,7 @@ def generate_small_files():
     generate_files("Small", "8x8", "./glyphs_8_unicode_nopadding_svg", 1000, 875)
 
 def generate_large_files():
-    generate_files("Large", "8x16", "./glyphs_16_unicode_nopadding_svg", 500, 875)
+    generate_files("Large", "8x16", "./glyphs_16_unicode_nopadding_svg", 500, 812)
 
 def generate_all_files():
     generate_small_files()
