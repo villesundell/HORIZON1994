@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="integraltp" format="2">
+  <advance width="500"/>
+  <unicode hex="2320"/>
+  <outline>
+    <contour>
+      <point x="187.5" y="312" type="line"/>
+      <point x="187.5" y="562" type="line"/>
+      <point x="250" y="562" type="line"/>
+      <point x="250" y="624.5" type="line"/>
+      <point x="437.5" y="624.5" type="line"/>
+      <point x="437.5" y="562" type="line"/>
+      <point x="500" y="562" type="line"/>
+      <point x="500" y="437" type="line"/>
+      <point x="375" y="437" type="line"/>
+      <point x="375" y="562" type="line"/>
+      <point x="312.5" y="562" type="line"/>
+      <point x="312.5" y="312" type="line"/>
+      <point x="312.5" y="187" type="line"/>
+      <point x="312.5" y="-188" type="line"/>
+      <point x="187.5" y="-188" type="line"/>
+    </contour>
+  </outline>
+</glyph>

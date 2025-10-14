@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="invbullet" format="2">
+  <advance width="500"/>
+  <unicode hex="25D8"/>
+  <outline>
+    <contour>
+      <point x="500" y="-188" type="line"/>
+      <point x="0" y="-188" type="line"/>
+      <point x="0" y="749.5" type="line"/>
+      <point x="500" y="749.5" type="line"/>
+    </contour>
+    <contour>
+      <point x="125" y="187" type="line"/>
+      <point x="187.5" y="187" type="line"/>
+      <point x="187.5" y="124.5" type="line"/>
+      <point x="312.5" y="124.5" type="line"/>
+      <point x="312.5" y="187" type="line"/>
+      <point x="375" y="187" type="line"/>
+      <point x="375" y="312" type="line"/>
+      <point x="312.5" y="312" type="line"/>
+      <point x="312.5" y="374.5" type="line"/>
+      <point x="250" y="374.5" type="line"/>
+      <point x="187.5" y="374.5" type="line"/>
+      <point x="187.5" y="312" type="line"/>
+      <point x="125" y="312" type="line"/>
+    </contour>
+  </outline>
+</glyph>

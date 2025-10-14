@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="asciicircum" format="2">
+  <advance width="500"/>
+  <unicode hex="005E"/>
+  <outline>
+    <contour>
+      <point x="187.5" y="624.5" type="line"/>
+      <point x="187.5" y="562" type="line"/>
+      <point x="125" y="562" type="line"/>
+      <point x="125" y="499.5" type="line"/>
+      <point x="0" y="499.5" type="line"/>
+      <point x="0" y="562" type="line"/>
+      <point x="62.5" y="562" type="line"/>
+      <point x="62.5" y="624.5" type="line"/>
+      <point x="125" y="624.5" type="line"/>
+      <point x="125" y="687" type="line"/>
+      <point x="187.5" y="687" type="line"/>
+      <point x="187.5" y="749.5" type="line"/>
+      <point x="250" y="749.5" type="line"/>
+      <point x="250" y="687" type="line"/>
+      <point x="312.5" y="687" type="line"/>
+      <point x="312.5" y="624.5" type="line"/>
+      <point x="375" y="624.5" type="line"/>
+      <point x="375" y="562" type="line"/>
+      <point x="437.5" y="562" type="line"/>
+      <point x="437.5" y="499.5" type="line"/>
+      <point x="375" y="499.5" type="line"/>
+      <point x="312.5" y="499.5" type="line"/>
+      <point x="312.5" y="562" type="line"/>
+      <point x="250" y="562" type="line"/>
+      <point x="250" y="624.5" type="line"/>
+    </contour>
+  </outline>
+</glyph>
