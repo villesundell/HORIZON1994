@@ -21,7 +21,7 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent):
     # === Initialize font ===
     font = fontforge.font()
     font.encoding = "UnicodeFull"
-    font.fontname = "HORIZON1994"
+    font.fontname = "HORIZON1994 " + size
     font.fullname = "HORIZON1994 Fixed " + size + " (" + dimensions + ")"
     font.familyname = "HORIZON1994"
     font.copyright = "Public domain (CC0)"
