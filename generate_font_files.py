@@ -14,15 +14,16 @@ EXPORT_WOFF2 = True
 
 EM = 1000
 
-def generate_files(size, dimensions, input_dir, glyph_width, ascent):
+def generate_files(size, dimensions, input_dir, glyph_width, ascent, correction):
     # === SETTINGS ===
-    BASENAME = "horizon1994-" + size.lower()
+    SUFFIX = ("-corrected" if correction else "")
+    BASENAME = "horizon1994-" + size.lower() + SUFFIX
 
     # === Initialize font ===
     font = fontforge.font()
     font.encoding = "UnicodeFull"
-    font.fontname = "HORIZON1994 " + size
-    font.fullname = "HORIZON1994 Fixed " + size + " (" + dimensions + ")"
+    font.fontname = "HORIZON1994" + size
+    font.fullname = "HORIZON1994 Fixed " + size + " (" + dimensions + (" aspect ratio corrected" if correction else "") + ")"
     font.familyname = "HORIZON1994"
     font.copyright = "Public domain (CC0)"
     font.version = "1.0"
@@ -53,6 +54,8 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent):
         glyph.manualHints = True;
         glyph.importOutlines(path)
         glyph.width = glyph_width
+        if correction:
+            glyph.transform((0.74, 0, 0, 1, 0, 0))
         print(f"Imported {fname} → U+{codepoint:04X}")
 
     # === Save the font ===
@@ -80,10 +83,10 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent):
         print("✅ Saved WOFF2")
 
 def generate_small_files():
-    generate_files("Small", "8x8", "./glyphs_8_unicode_nopadding_svg", 1000, 875)
+    generate_files("Small", "8x8", "./glyphs_8_unicode_nopadding_svg", 1000, 875, True)
 
 def generate_large_files():
-    generate_files("Large", "8x16", "./glyphs_16_unicode_nopadding_svg", 500, 812)
+    generate_files("Large", "8x16", "./glyphs_16_unicode_nopadding_svg", 500, 812, True)
 
 def generate_all_files():
     generate_small_files()
