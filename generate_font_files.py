@@ -83,7 +83,7 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent, correction)
         print("✅ Saved WOFF2")
 
 def generate_small_files():
-    generate_files("Small", "8x8", "./glyphs_8_unicode_nopadding_svg", 1000, 875, True)
+    generate_files("Small", "8x8", "./glyphs_8x8_unicode_nopadding_svg", 1000, 875, True)
 
 def generate_large_files():
     generate_files("Large", "9x16", "./glyphs_9x16_unicode_nopadding_svg", 500, 812, True)
