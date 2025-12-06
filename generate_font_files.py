@@ -86,7 +86,7 @@ def generate_small_files():
     generate_files("Small", "8x8", "./glyphs_8_unicode_nopadding_svg", 1000, 875, True)
 
 def generate_large_files():
-    generate_files("Large", "8x16", "./glyphs_16_unicode_nopadding_svg", 500, 812, True)
+    generate_files("Large", "9x16", "./glyphs_9x16_unicode_nopadding_svg", 500, 812, True)
 
 def generate_all_files():
     generate_small_files()

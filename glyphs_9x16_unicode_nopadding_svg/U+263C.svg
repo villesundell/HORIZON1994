@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="16px" version="1.1" viewBox="0 0 9 16" width="9px">
+  <defs/>
+  <g id="x000000_r0_g0_b0_a1.0">
+    <path d="M 3,9 2,9 2,8 0,8 0,7 2,7 2,6 3,6 3,3 5,3 5,6 6,6 6,7 8,7 8,8 6,8 6,9 5,9 5,12 3,12 z M 3,7 3,8 4,8 5,8 5,7 4,7 z" fill="#000000" fill-opacity="1.0" id="x000000_r0_g0_b0_a1.0_shape1"/>
+    <path d="M 1,6 0,6 0,5 1,5 2,5 2,6 z" fill="#000000" fill-opacity="1.0" id="x000000_r0_g0_b0_a1.0_shape2"/>
+    <path d="M 7,6 6,6 6,5 7,5 8,5 8,6 z" fill="#000000" fill-opacity="1.0" id="x000000_r0_g0_b0_a1.0_shape3"/>
+    <path d="M 0,9 2,9 2,10 0,10 z" fill="#000000" fill-opacity="1.0" id="x000000_r0_g0_b0_a1.0_shape4"/>
+    <path d="M 7,10 6,10 6,9 7,9 8,9 8,10 z" fill="#000000" fill-opacity="1.0" id="x000000_r0_g0_b0_a1.0_shape5"/>
+  </g>
+</svg>
