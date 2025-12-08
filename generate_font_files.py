@@ -63,23 +63,23 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent, correction)
     print(f"✅ Saved SFD")
 
     if EXPORT_TTF:
-        font.generate(BASENAME + ".ttf")
+        font.generate("ttf/" + BASENAME + ".ttf")
         print("✅ Saved TTF")
 
     if EXPORT_OTF:
-        font.generate(BASENAME + ".otf")
+        font.generate("otf/" + BASENAME + ".otf")
         print("✅ Saved OTF")
 
     if EXPORT_UFO:
-        font.generate(BASENAME + ".ufo")
+        font.generate("ufo/" + BASENAME + ".ufo")
         print("✅ Saved UFO")
 
     if EXPORT_WOFF:
-        font.generate(BASENAME + ".woff")
+        font.generate("woff/" + BASENAME + ".woff")
         print("✅ Saved WOFF")
 
     if EXPORT_WOFF2:
-        font.generate(BASENAME + ".woff2")
+        font.generate("woff2/" + BASENAME + ".woff2")
         print("✅ Saved WOFF2")
 
 def generate_small_files():
