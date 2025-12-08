@@ -51,9 +51,9 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent, correction)
         codepoint = int(match.group(1), 16)
         path = os.path.join(input_dir, fname)
         glyph = font.createChar(codepoint)
+        glyph.width = glyph_width
         glyph.manualHints = True;
         glyph.importOutlines(path)
-        glyph.width = glyph_width
         if correction:
             glyph.transform((0.74, 0, 0, 1, 0, 0))
         print(f"Imported {fname} → U+{codepoint:04X}")
@@ -86,7 +86,7 @@ def generate_small_files():
     generate_files("Small", "8x8", "./glyphs_8x8_unicode_nopadding_svg", 1000, 875, True)
 
 def generate_large_files():
-    generate_files("Large", "9x16", "./glyphs_9x16_unicode_nopadding_svg", 500, 812, True)
+    generate_files("Large", "9x16", "./glyphs_9x16_unicode_nopadding_svg", 562, 812, True)
 
 def generate_all_files():
     generate_small_files()
