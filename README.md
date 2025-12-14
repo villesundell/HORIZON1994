@@ -1,6 +1,8 @@
 # HORIZON1994 Font
 
-Authentic IBM VGA BIOS-compatible font from 1994, originally designed for Cirrus Logic's CL-GD543x series. Traced from the [STB Horizon Plus'](https://dosdays.co.uk/topics/Manufacturers/stb/horizon+.php) BIOS. The BIOS firmware is still available on-line ([`HORIZON-PCI-1.31.rom`](https://drive.usercontent.google.com/download?id=1WG81D1si9OFmcvAahldc1smjFVArijJx)), and has SHA3 checksum of `471cda4e422b826adaadbfeccd7081d91cd6c44b4c1cb68bb11eb53d`. This work is in the public domain ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)), as [are the original bitmap fonts](https://www.crowdspring.com/blog/font-law-licensing/).
+Authentic IBM VGA BIOS-compatible font from 1994, originally designed for Cirrus Logic's CL-GD543x series. Designed to look as seen on a CRT monitor of [IBM Aptiva 2144-92W](http://ps-2.kev009.com/pcpartnerinfo/ctstips/9e36.htm) from 1995 (with aspect ratio correction and enchanged glyphs). Traced from the [STB Horizon Plus'](https://dosdays.co.uk/topics/Manufacturers/stb/horizon+.php) BIOS. The BIOS firmware is still available on-line ([`HORIZON-PCI-1.31.rom`](https://drive.usercontent.google.com/download?id=1WG81D1si9OFmcvAahldc1smjFVArijJx)), and has SHA3 checksum of `471cda4e422b826adaadbfeccd7081d91cd6c44b4c1cb68bb11eb53d`. The same font can be found from `VGAPCI30.BIN` which is part of the source distribution [`CL543X110B_Firmware.ZIP`](https://dosdays.co.uk/media/cirrus_logic/CL543X110B_Firmware.ZIP) (SHA3: `f71dca4e8f5df4fa9b9739ddd253a278a63abf39485e5abb9d1000cc`).
+
+This work is in the public domain ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)), as [are the original bitmap fonts](https://www.crowdspring.com/blog/font-law-licensing/).
 
 Thanks to [Valentin François](https://github.com/ValentinFrancois) for the [pixels2svg](https://github.com/ValentinFrancois/pixels2svg) Python library, which was used to generate the SVGs!
 
