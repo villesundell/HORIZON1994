@@ -8,4 +8,11 @@ Thanks to [Valentin François](https://github.com/ValentinFrancois) for the [pix
 
 With small modifications, you can adapt the [generate_font_files.py](./generate_font_files.py) script for any "SVG to font files" project (especially for monospaced fonts).
 
+## Generate font files
+To generate the font files from the SVG sources, you need [FontForge](https://fontforge.org/en-US/). Once installed, you can simple run:
+```bash
+fontforge -script generate_font_files.py
+```
+to generate all the font files. Optionally you can supply "large" or "small" to generate just one subset.
+
 **⚠️ NOTE:** Despite numerous efforts to [find out](https://graphicdesign.stackexchange.com/questions/169571/should-i-use-descent-in-monospace-fonts), I was unable to conclude whether I should use `descent` to set the `baseline` in the case of fixed fonts like this one. I decided to pursue the model I find more idiomatic: defining baseline along the base of capital letters (commit cdebc7d).
