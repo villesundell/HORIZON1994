@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="integralbt" format="2">
+  <advance width="415"/>
+  <unicode hex="2321"/>
+  <outline>
+    <contour>
+      <point x="138.75" y="812" type="line"/>
+      <point x="231.25" y="812" type="line"/>
+      <point x="231.25" y="124.5" type="line"/>
+      <point x="185" y="124.5" type="line"/>
+      <point x="185" y="62" type="line"/>
+      <point x="46.25" y="62" type="line"/>
+      <point x="46.25" y="124.5" type="line"/>
+      <point x="0" y="124.5" type="line"/>
+      <point x="0" y="312" type="line"/>
+      <point x="92.5" y="312" type="line"/>
+      <point x="92.5" y="124.5" type="line"/>
+      <point x="138.75" y="124.5" type="line"/>
+    </contour>
+  </outline>
+</glyph>

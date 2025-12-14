@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>familyName</key>
+    <string>HORIZON1994</string>
+    <key>styleName</key>
+    <string>Large</string>
+    <key>styleMapFamilyName</key>
+    <string>HORIZON1994 Fixed Large (9x16 aspect ratio corrected)</string>
+    <key>versionMajor</key>
+    <integer>1</integer>
+    <key>versionMinor</key>
+    <integer>0</integer>
+    <key>copyright</key>
+    <string>Public domain (CC0)</string>
+    <key>trademark</key>
+    <string>Unregistered 'Horizon' trademark was used by STB Systems, Inc. for their graphics cards in the 1990s.</string>
+    <key>unitsPerEm</key>
+    <integer>1000</integer>
+    <key>ascender</key>
+    <integer>812</integer>
+    <key>descender</key>
+    <integer>-188</integer>
+    <key>italicAngle</key>
+    <real>0</real>
+    <key>note</key>
+    <string>2025-12-14: Created with FontForge (http://fontforge.org)</string>
+    <key>openTypeHeadCreated</key>
+    <string>2025/12/14 13:21:47</string>
+    <key>openTypeHheaAscender</key>
+    <integer>812</integer>
+    <key>openTypeHheaDescender</key>
+    <integer>-188</integer>
+    <key>openTypeHheaLineGap</key>
+    <integer>90</integer>
+    <key>openTypeNameManufacturer</key>
+    <string>Ville Sundell</string>
+    <key>openTypeNameLicense</key>
+    <string>CC0-1.0</string>
+    <key>openTypeNameLicenseURL</key>
+    <string>https://creativecommons.org/publicdomain/zero/1.0/</string>
+    <key>openTypeNameVersion</key>
+    <string>Version 1.000</string>
+    <key>openTypeNameDescription</key>
+    <string>Authentic IBM VGA BIOS compatible font from 1994.</string>
+    <key>postscriptFontName</key>
+    <string>HORIZON1994Large</string>
+    <key>postscriptFullName</key>
+    <string>HORIZON1994 Fixed Large (9x16 aspect ratio corrected)</string>
+    <key>postscriptWeightName</key>
+    <string>Regular</string>
+    <key>postscriptUnderlineThickness</key>
+    <integer>50</integer>
+    <key>postscriptUnderlinePosition</key>
+    <integer>-100</integer>
+    <key>guidelines</key>
+    <array/>
+  </dict>
+</plist>
