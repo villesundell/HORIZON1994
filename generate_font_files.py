@@ -59,7 +59,7 @@ def generate_files(size, dimensions, input_dir, glyph_width, ascent, correction)
         print(f"Imported {fname} → U+{codepoint:04X}")
 
     # === Save the font ===
-    font.save(BASENAME + ".sfd")
+    font.save("sfd/" + BASENAME + ".sfd")
     print(f"✅ Saved SFD")
 
     if EXPORT_TTF:
